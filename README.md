@@ -30,7 +30,7 @@ I2C interface with external pull-up resistors (4.7kOhm) for SCL and SDA lines.
 
 Brightness change
 
-![Brightness Demo](media/Brightness change.gif)
+![Brightness Demo](media/Brightness_change.gif)
 
 
 The repository example project (CMSIS V2) based on Nucleo L476RG devboard
