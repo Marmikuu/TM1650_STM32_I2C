@@ -23,6 +23,14 @@ TM1650-based 4-digit, 7-segment display
 I2C interface with external pull-up resistors (4.7kOhm) for SCL and SDA lines.
 
 **Demo**
+(-99.9 : 99.9) - signed float, 1 decimal place
+
+![alt text](RANGE2_operation.gif)
+
+Brightness change
+
+![alt text](<Brightness change.gif>)
+
 
 The repository example project (CMSIS V2) based on Nucleo L476RG devboard
 
