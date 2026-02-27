@@ -26,11 +26,11 @@ I2C interface with external pull-up resistors (4.7kOhm) for SCL and SDA lines.
 
 (-99.9 : 99.9) - signed float, 1 decimal place
 
-![alt text](RANGE2_operation.gif)
+![RANGE2 Demo](media/range2_operation.gif)
 
 Brightness change
 
-![alt text](<Brightness change.gif>)
+![Brightness Demo](media/brightness_change.gif)
 
 
 The repository example project (CMSIS V2) based on Nucleo L476RG devboard
