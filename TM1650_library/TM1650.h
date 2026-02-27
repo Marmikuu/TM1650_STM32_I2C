@@ -51,7 +51,7 @@
 /// RANGE_3, - positive and negative float numbers  (-9.99:9.99)
 
 
-typedef enum {RANGE_0,RANGE_1,RANGE_2, RANGE_3} range_mode;
+typedef enum {RANGE_0,RANGE_1,RANGE_2, RANGE_3, RANGE_4} range_mode;
 
 typedef enum {ON, OFF} disp_mode;
 typedef enum {BLANK, ZEROS} preceding_mode;
@@ -78,22 +78,21 @@ void TM1650_SetBrightness(TM1650_HandleTypeDef *htm, uint8_t brightness_lvl);
 
 //// Range////////////
 
-/// RANGE_0, - positive integers in the range(0-9999)
-/// RANGE_1 - integers in the range(-999,999)
-/// RANGE_2, - positive and negative float numbers  (-99.9 : 999.9)
-/// RANGE_3, - positive and negative float numbers  (-9.99:9.99)
+//range values :  0 , 1 ,2 , 3 , 4
+/// RANGE_0, - positive integers in the range(0 , 9999)
+/// RANGE_1 - integers in the range(-999 , 999)
+/// RANGE_2, - positive and negative float numbers  (-99.9 , 99.9)
+/// RANGE_3, - positive and negative float numbers  (-9.99 , 9.99)
+// 	RANGE_4, - positive float numbers (0.0 , 999.9)
 
 void TM1650_SetRange(TM1650_HandleTypeDef *htm, uint8_t range);
 
 void TM1650_show_next_digit(TM1650_HandleTypeDef *htm);
 
 void TM1650_prepare_number(TM1650_HandleTypeDef *htm, float number);
-///// I2C sent flag check
+
 void TM1650_current_digit_update(void);
 
-
-uint8_t TM1650_check_i2c_flag(void);
-
-
+void TM1650_show(TM1650_HandleTypeDef *htm, float number);
 
 #endif /* INC_TM1650_H_ */
