@@ -58,6 +58,9 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
+	TM1650_HandleTypeDef htm1;
+
+
 
 /* USER CODE END Variables */
 /* Definitions for LED_task */
@@ -144,8 +147,11 @@ void LED_task_init(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin); //// Blinking LED
-    osDelay(500);
+
+
+	HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+	osDelay(500);
+
   }
   /* USER CODE END LED_task_init */
 }
@@ -170,7 +176,7 @@ void TM1650_task_init(void *argument)
 
 	////////////// Initialize TM1650 ///////////////
 
-	TM1650_HandleTypeDef htm1;
+
 
 
 	////// DEMO - INIT
@@ -190,13 +196,12 @@ void TM1650_task_init(void *argument)
   {
 
 	ADC_value = HAL_ADC_GetValue(&hadc1);
-	float ADC_value_float = (float)ADC_value;
+	float ADC_value_float = ((float)ADC_value);
 
 	TM1650_show(&htm1, ADC_value_float);
 
-	printf("Number: %.3f\r\n", ADC_value_float);
-
-	osDelay(100);
+	printf("Number: %.2f\r\n", ADC_value_float);
+	osDelay(200);
 
 
 

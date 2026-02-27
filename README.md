@@ -18,10 +18,12 @@ STM32 HAL integration
 FreeRTOS-compatible (tested on Nucleo L476RG devboard)
 
 **Hardware requirements**
+
 TM1650-based 4-digit, 7-segment display
 I2C interface with external pull-up resistors (4.7kOhm) for SCL and SDA lines.
 
 **Demo**
+
 The repository example project (CMSIS V2) based on Nucleo L476RG devboard
 
 This project is licensed under the MIT License.
